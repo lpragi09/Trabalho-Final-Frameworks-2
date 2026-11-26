@@ -15,9 +15,10 @@ Permite cadastrar eventos, organizá-los por categoria e controlar as inscriçõ
 |---|---|
 | Vídeo de demonstração | _cole aqui o link do YouTube (Não listado) ou Drive_ |
 | Repositório | https://github.com/lpragi09/Trabalho-Final-Frameworks-2 |
-| Front-end (deploy) | https://trabalho-final-frameworks-2.vercel.app |
-| API (deploy) | _cole aqui o link do Render_ |
-| Swagger (deploy) | _link da API_ + `/swagger-ui.html` |
+| Front-end (Vercel) | https://trabalho-final-frameworks-2.vercel.app |
+| API e Swagger | rodam localmente: http://localhost:8080 e http://localhost:8080/swagger-ui.html |
+
+> A API não está hospedada. O front publicado na Vercel conversa com a API rodando em `localhost:8080`, então suba o back-end (passo 1 abaixo) antes de abrir o link. Se o navegador pedir permissão para acessar a rede local, aceite.
 
 ## Tecnologias
 
@@ -91,7 +92,7 @@ Usuário de teste criado automaticamente: **demo@eventos.com** / **123456**.
 | `DB_USER` / `DB_PASSWORD` | `sa` / vazio | Credenciais do banco |
 | `JWT_SECRET` | valor de desenvolvimento | Segredo do JWT (mínimo 32 caracteres) |
 | `JWT_EXPIRACAO_MS` | `86400000` (24 h) | Validade do token |
-| `CORS_ORIGINS` | `http://localhost:5173` | Endereços do front liberados no CORS |
+| `CORS_ORIGINS` | `localhost:5173` e o site da Vercel | Endereços do front liberados no CORS |
 
 ### 2. Front-end (porta 5173)
 
@@ -129,5 +130,5 @@ VITE_API_URL=http://localhost:8080
 
 ## Deploy
 
-- **API (Render):** novo *Web Service* apontando para a pasta `backend` (usa o `Dockerfile`). Defina `JWT_SECRET`, `CORS_ORIGINS` (URL do front na Vercel) e, se quiser PostgreSQL, `DB_URL`, `DB_USER` e `DB_PASSWORD`.
-- **Front (Vercel):** importe o repositório com *Root Directory* `frontend` e defina `VITE_API_URL` com a URL da API. O `vercel.json` já trata as rotas do React Router.
+- **Front:** publicado na Vercel (Root Directory `frontend`). O `vercel.json` trata as rotas do React Router.
+- **API:** roda localmente. Se quiser hospedar, o `backend/Dockerfile` já está pronto (ex.: Render); defina `JWT_SECRET`, `CORS_ORIGINS` e, para PostgreSQL, `DB_URL`, `DB_USER` e `DB_PASSWORD`, e aponte `VITE_API_URL` do front para a nova URL.
