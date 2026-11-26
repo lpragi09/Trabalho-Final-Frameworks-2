@@ -105,7 +105,7 @@ export default function ParticipantesSecao({ evento, aoAlterar }) {
       <Paper component="form" onSubmit={inscrever} noValidate sx={{ p: 3, border: '1px solid #e7e5f2' }}>
         <Typography variant="h6">Nova inscrição</Typography>
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-          {lotado ? 'O evento está lotado.' : `${evento.capacidade - evento.inscritos} vagas restantes.`}
+          {lotado ? 'O evento está lotado.' : `${evento.capacidade - evento.inscritos} ${evento.capacidade - evento.inscritos === 1 ? 'vaga restante' : 'vagas restantes'}.`}
         </Typography>
         {erroForm && <Alert severity="error" sx={{ mb: 2 }}>{erroForm}</Alert>}
         <Box sx={{ display: 'grid', gap: 2 }}>

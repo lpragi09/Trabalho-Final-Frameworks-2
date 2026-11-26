@@ -5,14 +5,17 @@ Permite cadastrar eventos, organizá-los por categoria e controlar as inscriçõ
 
 ## Integrantes
 
-- Luiz Paulo <!-- complete com o nome completo -->
+- Luiz Paulo Ragi
+- Israel Messias
+- Adalbert
 
 ## Links
 
 | O quê | Link |
 |---|---|
 | Vídeo de demonstração | _cole aqui o link do YouTube (Não listado) ou Drive_ |
-| Front-end (deploy) | _cole aqui o link da Vercel_ |
+| Repositório | https://github.com/lpragi09/Trabalho-Final-Frameworks-2 |
+| Front-end (deploy) | https://trabalho-final-frameworks-2.vercel.app |
 | API (deploy) | _cole aqui o link do Render_ |
 | Swagger (deploy) | _link da API_ + `/swagger-ui.html` |
 

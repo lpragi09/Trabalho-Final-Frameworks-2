@@ -67,6 +67,15 @@ public class DadosIniciais implements CommandLineRunner {
         criar("Oficina de Git e GitHub", "Do primeiro commit ao pull request.",
                 hoje.plusDays(3), 14, "Laboratório 4 - Bloco B", 2, educacao,
                 new String[][]{{"Gabi Torres", "gabi@email.com"}, {"Hugo Prado", "hugo@email.com"}});
+        criar("Show Acústico de Fim de Ano", "Música ao vivo para encerrar o semestre.",
+                hoje.plusDays(21), 20, "Teatro Municipal", 250, musica, new String[0][]);
+        criar("Torneio de Futsal Interclasses", "Times de todos os cursos disputam o troféu.",
+                hoje.plusDays(14), 13, "Ginásio Poliesportivo", 120, esporte,
+                new String[][]{{"Igor Lima", "igor@email.com"}});
+        criar("Palestra: Carreira em Tecnologia", "Como conseguir o primeiro estágio na área.",
+                hoje.plusDays(8), 19, "Auditório Unilavras", 180, tecnologia, new String[0][]);
+        criar("Workshop de Banco de Dados", "Modelagem, SQL e JPA na prática.",
+                hoje.plusDays(28), 14, "Laboratório 2 - Bloco A", 30, educacao, new String[0][]);
     }
 
     private void criar(String titulo, String descricao, LocalDate dia, int hora, String local, int capacidade,
